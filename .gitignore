@@ -1,0 +1,33 @@
+sitese Prerequisites
+*.d*.d
+
+# Comp# Compiled Object filesiled Object files
+*.slo*.slo
+*.lo*.lo
+*.o*.o
+*.obj*.obj
+
+# Precompi# Precompiled Headersled Headers
+*.gch*.gch
+*.pch*.pch
+
+# Compiled# Compiled Dynamic libraries Dynamic libraries
+*.so*.so
+*.dylib*.dylib
+*.dll*.dll
+
+# Fortran # Fortran module filesmodule files
+*.mod*.mod
+*.smod*.smod
+
+# Compiled S# Compiled Static librariestatic libraries
+*.lai*.lai
+*.la*.la
+*.a*.a
+*.lib*.lib
+
+# Executab# Executablesles
+*.exe*.exe
+*.out*.out
+*.app*.app
+
