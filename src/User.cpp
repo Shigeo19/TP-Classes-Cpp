@@ -1,22 +1,21 @@
 #include <iostream>
+#include <stdlib.h>
+#include <string>
 #include "User.h"
+#include "UserDetails.h"
 using namespace std;
 
 User::User(string user,
-		string pwd,
 		string fname,
 		string lname,
 		string email,
-		string addr,
-		string session) {
+		string addr) {
 
 	this->username = user;
-	this->password = pwd;
 	this->firstName = fname;
 	this->lastName = lname;
 	this->email = email;
 	this->adress = addr;
-	this->session = session;
 }
 
 string User::getEmail() {
@@ -31,10 +30,10 @@ string User::getHiddenEmail(){
 	string hiddenEmail;
 	string email = this->email;
 
-	for (int i=0; i<email.size(); i++)
+	for (size_t i=0; i < email.length(); i++)
 	{
 		char c = email.at(i);
-		if (i<4 || i >= email.size()-4)
+		if (i<4 || i >= email.length()-4)
 		{
 			hiddenEmail.append(1,c);
 		}
@@ -47,6 +46,7 @@ string User::getHiddenEmail(){
 	return hiddenEmail;
 }
 
+
 void User::setPassword(string password){
 	if (password.size() >= 8)
 	{
@@ -55,7 +55,7 @@ void User::setPassword(string password){
 		int existChif = 0;
 		int existCaraSpec = 0;
 
-		for (int i=0; i<password.size(); i++)
+		for (size_t i=0; i<password.length(); i++)
 		{
 			char c = password.at(i);
 			if (c<=90 && c>=65) {
@@ -73,6 +73,11 @@ void User::setPassword(string password){
 			this->password = password;
 		}
 	}
+}
+
+
+string User::printUserDetails() {
+	return this->username + "\n" + this->firstName + " \n"  + this->lastName + " \n" + this->email + "\n" + this->adress;
 }
 
 

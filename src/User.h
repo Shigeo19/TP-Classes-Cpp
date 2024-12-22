@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 using namespace std;
 
 class User {
@@ -14,12 +14,10 @@ class User {
 	public:
 		User();
 		User(string user,
-				string pwd,
 				string fname,
 				string lname,
 				string email,
-				string addr,
-				string session);
+				string addr);
 
 		string getEmail();
 		void setPassword(string password);
