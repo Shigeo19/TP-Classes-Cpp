@@ -9,21 +9,42 @@ class User {
 		string lastName;
 		string email;
 		string adress;
-		string session;
+		bool session;
 
 	public:
 		User();
 		User(string user,
-				string fname,
-				string lname,
-				string email,
-				string addr);
+			 string pwd,
+			 string fname,
+			 string lname,
+			 string email,
+			 string addr);
+
+		User(string user,
+			 string fname,
+			 string lname,
+			 string email,
+			 string addr);
+
+		User(string user,
+			 string email,
+			 string pwd);
+
+		string getUsername();
+		void setUsername(string username);
 
 		string getEmail();
+		string getHiddenEmail();
+
 		void setPassword(string password);
 		string getPassword();
+
+		void setSession(bool state);
+		bool getSession();
+
 		string printUserDetails();
-		string getHiddenEmail();
+
+
 
 };
 

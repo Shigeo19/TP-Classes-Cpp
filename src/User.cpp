@@ -2,20 +2,38 @@
 #include <stdlib.h>
 #include <string>
 #include "User.h"
-#include "UserDetails.h"
 using namespace std;
 
 User::User(string user,
-		string fname,
-		string lname,
-		string email,
-		string addr) {
+		   string pwd,
+		   string fname,
+		   string lname,
+		   string email,
+		   string addr) {
 
 	this->username = user;
+	this->password = pwd;
 	this->firstName = fname;
 	this->lastName = lname;
 	this->email = email;
 	this->adress = addr;
+}
+
+User::User(string user,
+		   string email,
+		   string pwd) {
+
+	this->username = user;
+	this->password = pwd;
+	this->email = email;
+}
+
+string User::getUsername(){
+	return this->username;
+}
+
+void User::setUsername(string username){
+	this->username = username;
 }
 
 string User::getEmail() {
@@ -25,6 +43,15 @@ string User::getEmail() {
 string User::getPassword() {
 	return this->password;
 }
+
+void User::setSession(bool state) {
+	this->session = state;
+}
+
+bool User::getSession() {
+	return this->session;
+}
+
 
 string User::getHiddenEmail(){
 	string hiddenEmail;

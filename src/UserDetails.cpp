@@ -1,11 +1,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string>
-#include "User.h"
 #include "UserDetails.h"
 using namespace std;
-
-
 
 
 UserDetails::UserDetails() {
