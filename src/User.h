@@ -34,6 +34,8 @@ class User {
 		void setUsername(string username);
 
 		string getEmail();
+		void setEmail(string email);
+
 		string getHiddenEmail();
 
 		void setPassword(string password);

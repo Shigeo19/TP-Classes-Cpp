@@ -53,7 +53,7 @@ bool User::getSession() {
 }
 
 
-string User::getHiddenEmail(){
+virtual string User::getHiddenEmail(){
 	string hiddenEmail;
 	string email = this->email;
 
@@ -102,8 +102,12 @@ void User::setPassword(string password){
 	}
 }
 
+virtual void User::setEmail(string email) {
+	this->email = email;
+}
 
-string User::printUserDetails() {
+
+virtual string User::printUserDetails() {
 	return this->username + "\n" + this->firstName + " \n"  + this->lastName + " \n" + this->email + "\n" + this->adress;
 }
 
